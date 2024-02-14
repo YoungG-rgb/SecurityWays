@@ -1,0 +1,8 @@
+server:
+  port: 9090
+
+spring:
+  profiles:
+    include:
+      - db
+  unsecured-paths: ${UNSECURED_PATHS:/cache-control/**, /img/**, /js/**, /webjars/**, /ext-api/**, /}
