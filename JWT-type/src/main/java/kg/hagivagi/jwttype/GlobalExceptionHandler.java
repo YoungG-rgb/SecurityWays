@@ -10,6 +10,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public String handleAnyException(Exception exception) {
+        log.error(exception.getMessage());
         return exception.getMessage();
     }
 }
