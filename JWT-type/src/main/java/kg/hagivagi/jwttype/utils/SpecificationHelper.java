@@ -21,7 +21,12 @@ public class SpecificationHelper {
         List<Expression<String>> expressions = new ArrayList<>();
         Arrays.stream(fields).forEach(field -> expressions.add(criteriaBuilder.coalesce(join != null ? join.get(field) : root.get(field), " ")));
 
-        return criteriaBuilder.lower(expressions.stream().reduce(criteriaBuilder::concat).get());
+        return criteriaBuilder.lower(
+                expressions.stream()
+                        .reduce(criteriaBuilder.literal(" "), (a, b) ->
+                                criteriaBuilder.concat(criteriaBuilder.concat(a, " "), b))
+        );
+
     }
 
 }
