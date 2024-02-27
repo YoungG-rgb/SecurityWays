@@ -1,8 +1,8 @@
-package kg.hagivagi.jwttype.entities;
+package kg.hagivagi.keycloaktype.entities;
 
 
 import jakarta.persistence.*;
-import kg.hagivagi.jwttype.models.HttpMethod;
+import kg.hagivagi.keycloaktype.enums.HttpMethod;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 

@@ -1,7 +1,6 @@
-package kg.hagivagi.jwttype.configs;
+package kg.hagivagi.keycloaktype.configs;
 
-
-import kg.hagivagi.jwttype.services.impl.DaoUserDetailsService;
+import kg.hagivagi.keycloaktype.services.impl.DaoUserDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -39,5 +38,4 @@ public class SecurityBeans {
         source.registerCorsConfiguration("/**", new CorsConfiguration().applyPermitDefaultValues());
         return source;
     }
-
 }

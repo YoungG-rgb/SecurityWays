@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${DB_URL:localhost}:5432/${DB_NAME:bookshop}
+    username: ${DB_PASSWORD:postgres}
+    password: ${DB_USERNAME:12345}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update

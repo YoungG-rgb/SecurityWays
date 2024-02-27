@@ -1,21 +1,24 @@
-package kg.hagivagi.jwttype.services.impl;
+package kg.hagivagi.keycloaktype.services.impl;
 
 
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Predicate;
+
 import jakarta.persistence.criteria.Root;
-import kg.hagivagi.jwttype.entities.User;
-import kg.hagivagi.jwttype.mappers.UserMapper;
-import kg.hagivagi.jwttype.models.FilterRequest;
-import kg.hagivagi.jwttype.models.UserModel;
-import kg.hagivagi.jwttype.repositories.UserRepository;
-import kg.hagivagi.jwttype.services.UserService;
+import kg.hagivagi.keycloaktype.entities.User;
+import kg.hagivagi.keycloaktype.mappers.UserMapper;
+import kg.hagivagi.keycloaktype.models.FilterRequest;
+import kg.hagivagi.keycloaktype.models.UserModel;
+import kg.hagivagi.keycloaktype.repositories.UserRepository;
+import kg.hagivagi.keycloaktype.services.UserService;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -23,9 +26,9 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-import static kg.hagivagi.jwttype.utils.SpecificationHelper.concatFieldsAndLower;
-import static kg.hagivagi.jwttype.utils.SpecificationHelper.getContainsLikePattern;
-import static kg.hagivagi.jwttype.utils.StringUtils.isEmpty;
+import static kg.hagivagi.keycloaktype.utils.SpecificationHelper.concatFieldsAndLower;
+import static kg.hagivagi.keycloaktype.utils.SpecificationHelper.getContainsLikePattern;
+import static kg.hagivagi.keycloaktype.utils.StringUtils.isEmpty;
 
 
 @Slf4j
@@ -67,6 +70,12 @@ public class UserServiceImpl implements UserService {
                         .orElseThrow(() -> new Exception(String.format("No user found with id '%s'.", id)))
         );
         return true;
+    }
+
+    @Override
+    public User findByLogin(String login) throws Exception {
+        return userRepository.findByLogin(login)
+                .orElseThrow(() -> new Exception(String.format("No user found with login '%s'.", login)));
     }
 
     @AllArgsConstructor

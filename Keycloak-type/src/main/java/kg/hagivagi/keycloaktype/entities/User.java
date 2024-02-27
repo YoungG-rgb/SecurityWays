@@ -1,4 +1,4 @@
-package kg.hagivagi.jwttype.entities;
+package kg.hagivagi.keycloaktype.entities;
 
 import jakarta.persistence.*;
 import lombok.*;

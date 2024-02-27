@@ -1,4 +1,4 @@
-package kg.hagivagi.jwttype;
+package kg.hagivagi.jwttype.utils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -10,7 +10,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public String handleAnyException(Exception exception) {
-        log.error(exception.getMessage());
+        log.error(exception.getMessage(), exception);
         return exception.getMessage();
     }
 }
