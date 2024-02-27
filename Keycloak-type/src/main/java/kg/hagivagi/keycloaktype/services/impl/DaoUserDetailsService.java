@@ -1,6 +1,5 @@
 package kg.hagivagi.keycloaktype.services.impl;
 
-
 import kg.hagivagi.keycloaktype.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

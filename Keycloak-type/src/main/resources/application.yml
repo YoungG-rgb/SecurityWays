@@ -5,3 +5,13 @@ spring:
   profiles:
     include:
       - db
+
+keycloak:
+  auth-server-url: ${AUTH_SERVER_URL:}
+  realm: ${REALM:}
+  resource: ${KEYCLOAK_RESOURCE:}
+  bearer-only: ${BEARER_ONLY:true}
+  ssl-required: ${SSL_REQUIRED:external}
+  credentials:
+    secret: ${KEYCLOAK_SECRET:}
+  confidential-port: ${CONFIDENTIAL_PORT:0}

@@ -1,6 +1,6 @@
 package kg.hagivagi.keycloaktype.entities;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.springframework.security.core.GrantedAuthority;

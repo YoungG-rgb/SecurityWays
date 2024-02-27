@@ -1,11 +1,11 @@
 package kg.hagivagi.keycloaktype.entities;
 
 
-import jakarta.persistence.*;
-import kg.hagivagi.keycloaktype.enums.HttpMethod;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.springframework.http.HttpMethod;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 

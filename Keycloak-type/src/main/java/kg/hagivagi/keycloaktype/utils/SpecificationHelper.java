@@ -1,11 +1,11 @@
 package kg.hagivagi.keycloaktype.utils;
 
-import jakarta.persistence.criteria.CriteriaBuilder;
-import jakarta.persistence.criteria.Expression;
-import jakarta.persistence.criteria.Join;
-import jakarta.persistence.criteria.Root;
 import lombok.experimental.UtilityClass;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.Expression;
+import javax.persistence.criteria.Join;
+import javax.persistence.criteria.Root;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

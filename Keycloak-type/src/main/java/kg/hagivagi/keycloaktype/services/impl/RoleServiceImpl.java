@@ -1,7 +1,5 @@
 package kg.hagivagi.keycloaktype.services.impl;
 
-
-
 import kg.hagivagi.keycloaktype.entities.Role;
 import kg.hagivagi.keycloaktype.mappers.RoleMapper;
 import kg.hagivagi.keycloaktype.models.RoleModel;

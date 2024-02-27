@@ -1,11 +1,6 @@
 package kg.hagivagi.keycloaktype.services.impl;
 
 
-import jakarta.persistence.criteria.CriteriaBuilder;
-import jakarta.persistence.criteria.CriteriaQuery;
-import jakarta.persistence.criteria.Predicate;
-
-import jakarta.persistence.criteria.Root;
 import kg.hagivagi.keycloaktype.entities.User;
 import kg.hagivagi.keycloaktype.mappers.UserMapper;
 import kg.hagivagi.keycloaktype.models.FilterRequest;
@@ -15,14 +10,16 @@ import kg.hagivagi.keycloaktype.services.UserService;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 import java.util.ArrayList;
 import java.util.List;
 
